@@ -12,6 +12,13 @@ document.addEventListener("keypress", function (){
     }
 })
 
+document.addEventListener("touchstart", function (){
+    if(keyPressed === false){
+        nextSequence() 
+        keyPressed = true
+    }
+})
+
 
 function nextSequence(){
     playerSequence = [];
