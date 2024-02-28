@@ -25,9 +25,11 @@ function nextSequence(){
     document.querySelector("#level-title").textContent = "Level " + level
     randomNumber = (Math.floor(Math.random()*4))
     gameSequence.push(buttonColours[randomNumber])
-    playSound(buttonColours[randomNumber])
-    flashAnimation(randomNumber)
-
+    
+    setTimeout(() => {
+        playSound(buttonColours[randomNumber])
+        flashAnimation(randomNumber)
+    }, 500);
 }
 
 for(var i = 0; i < document.querySelectorAll(".btn").length; i++){
